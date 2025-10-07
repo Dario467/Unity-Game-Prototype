@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+//singleton class in order to interact with the grid efficiently in memory and for simplicity
 public class GridManager : MonoBehaviour
 {
     [SerializeField] private Grid grid;
     public static GridManager Instance { get; private set; }
+    // Class created to give attributes tu each cell
     public class CellInfo
     {
         public bool occupied;
@@ -14,6 +16,7 @@ public class GridManager : MonoBehaviour
     }
 
     [SerializeField] private Tilemap groundTile;
+    // Dictionary that add each cell the atributes
     private Dictionary<Vector3Int, CellInfo> groundCells = new Dictionary<Vector3Int, CellInfo>();
 
     void Awake()
@@ -60,6 +63,7 @@ public class GridManager : MonoBehaviour
         return false;
     }
 
+    //this fuction update the status of an especific cell as occupied and added wich object is ocuping the cell
     public void OccupyCell(Vector3Int cellPos, GameObject hasObject)
     {
         if (!ContainsCell(cellPos) || groundCells[cellPos].occupied)
@@ -71,6 +75,7 @@ public class GridManager : MonoBehaviour
         Debug.Log("ocupada");
     }
 
+    //this fuction update 
     public void FreeCell(Vector3Int cellPos)
     {
         if (!ContainsCell(cellPos) || !groundCells[cellPos].occupied)
