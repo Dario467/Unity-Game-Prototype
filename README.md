@@ -20,4 +20,13 @@ The main goal of this prototype is to demonstrate strong architecture, maintaina
 ## Game working
 ![Grabacindepantalla2025-10-06alas9 02 31a m -ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c8a4cd0c-4e00-4400-b303-5834aa7885bd)
 
+## How to Test the Prototype
+If you want to prove it your self:
 
+* **Download the build (.zip):** [Build Google Drive Link](https://drive.google.com/file/d/19Qt8qQhBhMC0F3V-1hTj5-5yFp_7l8rN/view?usp=share_link)
+
+**Instructions:**
+1.  Download the zip.
+2.  Unzip the file.
+3.  Execute the file **'.exe'**.
+4.  **To leave:** Press `Alt` + `F4` (in Windows) or `Command` + `Q` (in Mac)
